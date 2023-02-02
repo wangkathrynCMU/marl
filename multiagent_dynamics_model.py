@@ -30,7 +30,6 @@ class MultiAgentDynamicsModel(nn.Module):
         self.encoder_layer = nn.TransformerEncoderLayer(d_model=64, dim_feedforward = 256, nhead=1, batch_first=True)
         self.transformer_encoder = nn.TransformerEncoder(self.encoder_layer, num_layers=2)
         
-        # QUESTION: why is the output of the encoder layer size sdim+adim? why isn't it dim_feedforward?
         self.meanlayer = nn.Sequential(
                         nn.Linear(d_model, h_dim),
                         nn.ReLU(),
@@ -78,6 +77,15 @@ class MultiAgentDynamicsModel(nn.Module):
         mseloss = torch.nn.MSELoss()(next_state_reward, s_next_mean)
 
         return loss, mseloss
+    
+    def sample_next_state_reward(self, states, actions):
+        next_state_mean, next_state_stdev = self.forward(states, actions)
+        next_state_reward = torch.normal(next_state_mean, next_state_stdev)
+
+        state = next_state_reward[...,:-1]
+        reward = next_state_reward[...,-1:]
+        
+        return state, reward
 
 def train(model, opt, N_train_epochs, prev_epochs, device):
     losses = list()
@@ -260,7 +268,7 @@ if __name__ == '__main__':
     os.mkdir(run_dir)
     filepath = run_dir + '\\multiagent_dynamics_'
 
-    min_test_loss = 10**10    
+    min_test_loss = 10**10
     N_train_epochs = 250
     prev_epochs = 0
 
