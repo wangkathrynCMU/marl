@@ -16,6 +16,7 @@ from comet_ml import Experiment
 from datetime import datetime
 
 from multiagent_dynamics_model import MultiAgentDynamicsModel
+from environment_to_gif import save_frames_as_gif
 
 comet = True
 if comet:
@@ -66,12 +67,6 @@ class MultiAgentPolicyModel(nn.Module):
                         nn.Linear(h_dim, a_dim),
                         nn.Sigmoid()
         )
-        # self.stdevlayer = nn.Sequential(
-        #                 nn.Linear(d_model, h_dim),
-        #                 nn.ReLU(),
-        #                 nn.Linear(h_dim, a_dim),
-        #                 nn.Softplus()
-        # )
         
     def forward(self,state):
         pre_transformer = self.pre_transformer(state)
@@ -94,57 +89,36 @@ class MultiAgentPolicyModel(nn.Module):
 
         return output
 
-    # def get_loss(self,states):
-    #     '''
-    #     Passes batch of states and actions through dynamics model, then evaluates log likelihood of predictions
-        
-    #     states: batch_size x s_dim
-    #     actions: batch_size x a_dim
-    #     next_states: batch_size x s_dim
-
-    #     '''
-    #     action = self.forward(states) #s_next_sig
-    #     exp_reward = self.dynamics_model(states, action)[0][...,-1:] #TODO: take mean over agents, check loss value
-    #     # print(exp_reward)
-    #     # print(exp_reward[...,-1:])
-    #     loss = -1*torch.mean(exp_reward)
-
-    #     return loss, action
-
-
-def train(model, dynamics_model, start_states, opt, exploration, ep_len, epochs, prev_epochs, device):
+def train(model, dynamics_model, start_states, opt, exploration, ep_len, epochs, device):
     losses = list()
 
     #TODO: reset state
     states = start_states
-
+    batch_size = start_states.shape[0]
+    print("batch size:", batch_size)
     # clear the gradients
     
     losses = []
     for epoch in range(epochs):
 
-        loss = None
+        loss = 0
         opt.zero_grad()
-
+        
+        states = start_states
         for i in range(ep_len):
             actions = model.forward(states) 
             next_states, rewards = dynamics_model.sample_next_state_reward(states, actions) #shape (batch size, num agents, 1)
-            rewards = torch.mean(rewards) # shape (batch size, 1)
+            states = next_states 
             # print('mean_rewards', torch.mean(rewards))
-            if loss == None:
-                loss = rewards
-            else:
-                loss = loss + (-1 * rewards)
-
-        mean_loss = loss/ep_len
-
+            loss = loss + (-1 * torch.sum(rewards)/3/batch_size) #todo make num agents dynamic
+            # print("loss:", loss)
+        mean_loss = loss/ep_len 
+        print(mean_loss)
         mean_loss.backward()
         opt.step()
 
         losses.append(mean_loss.item())
 
-        if comet:
-            experiment.log_metric("train_loss", mean_loss, step= prev_epochs + epoch)
     return np.mean(losses)
 
 def validate(policy_model, env, ep_len, epochs):
@@ -155,23 +129,113 @@ def validate(policy_model, env, ep_len, epochs):
         for epoch in range(epochs):    
             state_dict = env.reset()
             total_loss = 0
+            frames = []
             for i in range(ep_len):
                 state_tensor = dict_to_torch(state_dict).cuda()
                 action = policy_model.forward_to_dictionary(state_tensor)
                 state_dict, reward, terminated, info = env.step(action)
-                mean_loss = -1 * (np.mean(dict_to_numpy(reward)))
-                total_loss += mean_loss
-            epoch_loss = total_loss/ep_len
+                total_loss += -1 * (np.sum(dict_to_numpy(reward)))
+            epoch_loss = total_loss/ep_len/3 #todo make num agents dynamic
             losses.append(epoch_loss)
             #convert actions to dictionary
     return np.mean(losses)
+
+def plot_dynamics_vs_environment(env, dynamics_model, policy_model):
+    #looking at agent trajectory in dynamics model vs. real environment
+    import matplotlib.pyplot as plt
+    import copy
+
+    state = env.reset()
+    actualx = []
+    actualy = []
+    actualr = []
+
+    predictedx = []
+    predictedy = []
+    predictedr = []
+
+    predicted_state = copy.deepcopy(state)
+    predicted_state = dict_to_torch(predicted_state)
+    state_arr = dict_to_numpy(state)
+
+    actualx = state_arr[:,2].reshape(-1, 1)
+    actualy = state_arr[:,3].reshape(-1, 1)
+    predictedx = state_arr[:,2].reshape(-1, 1)
+    predictedy= state_arr[:,3].reshape(-1, 1)
     
+    # predicted_state = predicted_state[None, :,:]
+    frames = []
+    
+    policy_model = policy_model.cpu()
+    dynamics_model = dynamics_model.cpu()
+    reward_dynamics = 0
+    reward_env = 0
+    with torch.no_grad():
+        for i in range(ep_len):
+            # state_tensor = dict_to_torch(state_dict).cuda()
+            action = policy_model.forward_to_dictionary(predicted_state)
+            action_tensor = dict_to_torch(action)
+            predicted_state, predicted_rewards = dynamics_model.sample_next_state_reward(predicted_state, action_tensor)
+            
+            # s_next_mean = predicted_state[0]
+            predictedx = np.concatenate((predictedx, predicted_state[:,2].numpy().reshape(-1, 1)), axis = 1)
+            predictedy = np.concatenate((predictedy, predicted_state[:,3].numpy().reshape(-1, 1)), axis = 1)
+            # print(reward_dynamics)
+            reward_dynamics += torch.mean(predicted_rewards).item()
+            # print("dynamics reward", predicted_rewards, torch.mean(predicted_rewards).item())
+            predictedr.append(reward_dynamics)
+
+            obs, reward, terminated, info = env.step(action)
+
+            obs_arr = np.matrix(dict_to_numpy(obs))
+            actualx = np.concatenate((actualx, obs_arr[:,2]), axis = 1)
+            actualy = np.concatenate((actualy, obs_arr[:,3]), axis = 1)
+
+            reward_arr = dict_to_numpy(reward)
+            # print("env reward", reward_arr, np.mean(reward_arr))
+            reward_env += np.mean(reward_arr)
+            actualr.append(reward_env)
+
+    plt.plot(0)
+    plt.plot(actualx[0].T, actualy[0].T, label = "agent 1 actual")
+    plt.plot(actualx[1].T, actualy[1].T, label = "agent 2 actual")
+    plt.plot(actualx[2].T, actualy[2].T, label = "agent 3 actual")
+    plt.plot(predictedx[0].T, predictedy[0].T, label = "agent 1 predicted")
+    plt.plot(predictedx[1].T, predictedy[1].T, label = "agent 2 predicted")
+    plt.plot(predictedx[2].T, predictedy[2].T, label = "agent 3 predicted")
+    plt.legend()
+    plt.savefig('position_plot.png')
+    plt.show()
+
+    plt.plot(1)
+    x1 = np.array([range(len(predictedr))]).transpose()
+    plt.plot(x1, predictedr, label = "r predicted")
+    plt.plot(x1, actualr, label = "r actual")
+    plt.legend()
+    plt.savefig('reward_plot.png')
+    plt.show()
+
+    env.close()
+
+def make_model_dir():
+    current_time = datetime.now()
+    str_date_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
+    print("Current timestamp", str_date_time)
+    folder = "..\\model_checkpoints\\multiagent_policy"
+    run_dir = folder + "\\multiagent_policy_" + str_date_time + "_" + str(env_name) + '_wd_' +str(wd)+'_lr_'+str(lr)+'_hdim_' + str(h_dim)
+    os.mkdir(run_dir)
+    filepath = run_dir + '\\multiagent_policy_'
+    return filepath
+
+
 if __name__ == '__main__':
     # PATH = ".\\all_checkpoints_transformer\\transformer_11_04_2022_12_26_39_simple_spread_v2_wd_0.001_lr_0.0001_hdim_256\\transformer_Decay_best_loss_-1.799452094718725.pth"
     # PATH = ".\\all_checkpoints_transformer\\transformer_11_04_2022_12_26_39_simple_spread_v2_wd_0.001_lr_0.0001_hdim_256\\copy_transformer_Decay_best_loss_-1.799452094718725.pth"
     # PATH = ".\\all_checkpoints_transformer\\transformer_10_26_2022_07_51_40_simple_spread_v2_wd_0.001_lr_0.0001_hdim_512\\transformer_Decay_best_loss_-1.8287531244372266.pth"
     # PATH = ".\\all_checkpoints_transformer\\transformer_11_18_2022_13_25_34_simple_spread_v2_wd_0.001_lr_0.0001_hdim_256\\transformer_Decay_best_loss_-5.749979948712691.pth"
-    PATH = "..\\biorobotics\\all_checkpoints_transformer\\transformer_01_25_2023_02_10_05_simple_spread_v2_wd_0.001_lr_0.0001_hdim_256\\transformer_Decay_best_loss_-5.724443092141849.pth"
+    # PATH = "..\\biorobotics\\all_checkpoints_transformer\\transformer_01_25_2023_02_10_05_simple_spread_v2_wd_0.001_lr_0.0001_hdim_256\\transformer_Decay_best_loss_-5.724443092141849.pth"
+    # PATH = "..\\biorobotics\\all_checkpoints_transformer\\transformer_01_25_2023_12_19_44_simple_spread_v2_wd_0.001_lr_0.0001_hdim_256\\transformer_Decay_best_loss_-7.2226179268924895.pth"
+    PATH = "..\\model_checkpoints\\multiagent_dynamics\\multiagent_dynamics_02_02_2023_03_51_37_simple_spread_v2_wd_0.001_lr_0.0001_hdim_256\\multiagent_dynamics_Decay_best_loss_-8.795983451431288.pth"
     env_name = 'simple_spread_v2'
     env_config = {
         'N':3, 
@@ -206,8 +270,7 @@ if __name__ == '__main__':
     dynamics_model.load_state_dict(torch.load(PATH)['model_state_dict'])
     dynamics_model = dynamics_model.cuda()
 
-    training_epochs = 500
-    n_epochs = 5000
+    n_epochs = 500
 
     policy_model = MultiAgentPolicyModel(dynamics_model, agents, s_dim, a_dim, d_model, h_dim)
     policy_model = policy_model.cuda()
@@ -215,10 +278,13 @@ if __name__ == '__main__':
     lr = 1e-4
     wd = 0.001 #weight decay
     opt = torch.optim.Adam(policy_model.parameters(), lr=lr, weight_decay=wd) #which opt to use?
+
     ep_len = 100
-    train_epochs = 50
+    train_epochs = 25
     test_epochs = 25
-    prev_epochs = 0
+
+    min_test_loss = 10**10
+    filepath = make_model_dir()
 
     for i in range(n_epochs):
 
@@ -229,13 +295,55 @@ if __name__ == '__main__':
         states = torch.stack(states)
         states = states.cuda()
 
-        train_loss = train(policy_model, dynamics_model, states, opt, 0.1, ep_len, train_epochs, prev_epochs, device)
-        prev_epochs += train_epochs
+        train_loss = train(policy_model, dynamics_model, states, opt, 0.1, ep_len, train_epochs, device)
         
         test_loss = validate(policy_model=policy_model, env=env, ep_len=ep_len, epochs=test_epochs)
 
         if comet:
+            experiment.log_metric("train_loss", train_loss, step=i)
             experiment.log_metric("test_loss", test_loss, step=i)
         print("epoch", i, " | ", "train_loss:", train_loss, "test_loss:", test_loss)
+
+        if i % 10 == 0:
+            checkpoint_path = filepath + 'Decay.pth'
+            torch.save({
+                        'model_state_dict': policy_model.state_dict(),
+                        'model_optimizer_state_dict': opt.state_dict(),
+                        }, checkpoint_path)
+
+        if test_loss < min_test_loss:
+            # print('Min Test Loss:', min_test_loss)
+            checkpoint_path = filepath + "Decay_best_loss_" + str(test_loss) +".pth"
+            if min_test_loss != 10**10:
+                os.rename(filepath + "Decay_best_loss_" + str(min_test_loss) +".pth", checkpoint_path)
+            min_test_loss = test_loss
+
+            checkpoint_path = filepath + "Decay_best_loss_" + str(test_loss) +".pth"
+            torch.save({'model_state_dict': policy_model.state_dict(),
+                'model_optimizer_state_dict': opt.state_dict()}, checkpoint_path)
+
+    plot_dynamics_vs_environment(env, dynamics_model, policy_model)
+
+    with torch.no_grad():
+        for i in range(5):
+            state_dict = env.reset()
+            state = dict_to_torch(state_dict)
+            agents = env.agents
+
+            frames = []
+            for j in range(100):
+                env.render()
+                frames.append(env.render(mode="rgb_array"))
+                action = policy_model.forward_to_dictionary(state)
+                obs, reward, terminated, info = env.step(action)
+                state = dict_to_torch(obs)
+
+            save_frames_as_gif(frames, filename='gym_animation_' + str(i) + '.gif')
+    
+    
+    env.close()
+    
+
+    
 
         

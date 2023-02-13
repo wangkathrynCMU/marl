@@ -15,7 +15,7 @@ from comet_ml import Experiment
 
 from datetime import datetime
 
-comet = True
+comet = False
 experiment = None
 
 
@@ -86,6 +86,18 @@ class MultiAgentDynamicsModel(nn.Module):
         reward = next_state_reward[...,-1:]
         
         return state, reward
+    
+    def sample_next_dict(self, states, actions, agents):
+        snext_state_mean, next_state_stdev = self.forward(states, actions)
+        next_state_reward = torch.normal(next_state_mean, next_state_stdev)
+        
+        output = dict()
+        index = 0
+        for agent in agents:
+            output[agent] = next_state_reward[index]
+            index +=1
+
+        return output
 
 def train(model, opt, N_train_epochs, prev_epochs, device):
     losses = list()
@@ -173,7 +185,6 @@ def gather_data(N,ep_len, env_name, env_config, trainer=None, noise = 0):
             action = sample_action(env, agents)
             action_tensor = dict_to_torch(action)
 
-            
             # this is necessary because discrete action space has dimension 1 for each agent (0-4 for each action option)
             # but continuous action space has dimension 4 (each value represents velocity in each direction)
             if env_config['continuous_actions']:
@@ -243,7 +254,6 @@ if __name__ == '__main__':
         a_dim = actions.shape[2]
     else:
         a_dim = 1
-        
     # print("dims: ", state_dim, a_dim, h_dim)
     model = MultiAgentDynamicsModel(state_dim,a_dim,d_model,h_dim)
     if torch.cuda.is_available():
@@ -269,7 +279,7 @@ if __name__ == '__main__':
     filepath = run_dir + '\\multiagent_dynamics_'
 
     min_test_loss = 10**10
-    N_train_epochs = 250
+    N_train_epochs = 100
     prev_epochs = 0
 
     if comet:
