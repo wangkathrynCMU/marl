@@ -85,6 +85,9 @@ class RewardDynamicsTransformer(nn.Module):
         # sampled_rewards = next_state_distribution.sample()
         # return sampled_rewards
         return r_next_mean
+    
+    def sample_next_reward_dict(self, states, actions):
+        return torch_to_dict(self.sample_next_reward(states, actions))
 
 def train_reward(model, train_loader, optimizer, device = None):
     losses = list()

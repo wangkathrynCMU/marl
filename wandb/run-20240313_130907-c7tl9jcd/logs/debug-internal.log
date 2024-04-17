@@ -1,0 +1,1606 @@
+2024-03-13 13:09:07,520 INFO    StreamThr :17068 [internal.py:wandb_internal():86] W&B internal server running at pid: 17068, started at: 2024-03-13 13:09:07.520425
+2024-03-13 13:09:07,520 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status
+2024-03-13 13:09:07,533 INFO    WriterThread:17068 [datastore.py:open_for_write():87] open: C:\Users\kkwan\devDir\marl\wandb\run-20240313_130907-c7tl9jcd\run-c7tl9jcd.wandb
+2024-03-13 13:09:07,533 DEBUG   SenderThread:17068 [sender.py:send():382] send: header
+2024-03-13 13:09:07,579 DEBUG   SenderThread:17068 [sender.py:send():382] send: run
+2024-03-13 13:09:07,926 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: check_version
+2024-03-13 13:09:07,941 INFO    SenderThread:17068 [dir_watcher.py:__init__():211] watching files in: C:\Users\kkwan\devDir\marl\wandb\run-20240313_130907-c7tl9jcd\files
+2024-03-13 13:09:07,941 INFO    SenderThread:17068 [sender.py:_start_run_threads():1136] run started: c7tl9jcd with start time 1710349747.520424
+2024-03-13 13:09:07,941 DEBUG   SenderThread:17068 [sender.py:send_request():409] send_request: check_version
+2024-03-13 13:09:08,096 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: run_start
+2024-03-13 13:09:10,426 DEBUG   HandlerThread:17068 [system_info.py:__init__():27] System info init
+2024-03-13 13:09:10,426 DEBUG   HandlerThread:17068 [system_info.py:__init__():42] System info init done
+2024-03-13 13:09:10,426 INFO    HandlerThread:17068 [system_monitor.py:start():194] Starting system monitor
+2024-03-13 13:09:10,426 INFO    SystemMonitor:17068 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-03-13 13:09:10,426 INFO    HandlerThread:17068 [system_monitor.py:probe():214] Collecting system info
+2024-03-13 13:09:10,426 INFO    SystemMonitor:17068 [interfaces.py:start():190] Started cpu monitoring
+2024-03-13 13:09:10,426 INFO    SystemMonitor:17068 [interfaces.py:start():190] Started disk monitoring
+2024-03-13 13:09:10,426 INFO    SystemMonitor:17068 [interfaces.py:start():190] Started gpu monitoring
+2024-03-13 13:09:10,441 INFO    SystemMonitor:17068 [interfaces.py:start():190] Started memory monitoring
+2024-03-13 13:09:10,457 INFO    SystemMonitor:17068 [interfaces.py:start():190] Started network monitoring
+2024-03-13 13:09:10,474 DEBUG   HandlerThread:17068 [system_info.py:probe():151] Probing system
+2024-03-13 13:09:10,474 DEBUG   HandlerThread:17068 [system_info.py:_probe_git():136] Probing git
+2024-03-13 13:09:10,489 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-13 13:09:10,553 DEBUG   HandlerThread:17068 [system_info.py:_probe_git():144] Probing git done
+2024-03-13 13:09:10,553 DEBUG   HandlerThread:17068 [system_info.py:probe():199] Probing system done
+2024-03-13 13:09:10,553 DEBUG   HandlerThread:17068 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.8.10', 'heartbeatAt': '2024-03-13T17:09:10.474220', 'startedAt': '2024-03-13T17:09:07.486373', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '.\\custom_multiagent_env_rllib.py', 'codePathLocal': 'custom_multiagent_env_rllib.py', 'codePath': 'custom_multiagent_env_rllib.py', 'git': {'remote': 'https://github.com/wangkathrynCMU/marl.git', 'commit': 'f5d420ccedea0c26c48cb386697d96aa859d4d71'}, 'email': 'kwang3@andrew.cmu.edu', 'root': 'C:/Users/kkwan/devDir/marl', 'host': 'Kathryn_Wang', 'username': 'kkwan', 'executable': 'C:\\Users\\kkwan\\AppData\\Local\\Programs\\Python\\Python38\\python.exe', 'cpu_count': 16, 'cpu_count_logical': 24, 'cpu_freq': {'current': 1506.0, 'min': 0.0, 'max': 2300.0}, 'cpu_freq_per_core': [{'current': 1506.0, 'min': 0.0, 'max': 2300.0}], 'disk': {'/': {'total': 1884.4374809265137, 'used': 171.35108947753906}}, 'gpu': 'NVIDIA GeForce RTX 3080 Ti Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3080 Ti Laptop GPU', 'memory_total': 17179869184}], 'memory': {'total': 63.629573822021484}}
+2024-03-13 13:09:10,553 INFO    HandlerThread:17068 [system_monitor.py:probe():224] Finished collecting system info
+2024-03-13 13:09:10,553 INFO    HandlerThread:17068 [system_monitor.py:probe():227] Publishing system info
+2024-03-13 13:09:10,553 INFO    HandlerThread:17068 [system_monitor.py:probe():229] Finished publishing system info
+2024-03-13 13:09:10,577 DEBUG   SenderThread:17068 [sender.py:send():382] send: files
+2024-03-13 13:09:10,577 INFO    SenderThread:17068 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-03-13 13:09:10,585 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: python_packages
+2024-03-13 13:09:10,585 DEBUG   SenderThread:17068 [sender.py:send_request():409] send_request: python_packages
+2024-03-13 13:09:10,585 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 13:09:10,585 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 13:09:10,585 DEBUG   SenderThread:17068 [sender.py:send_request():409] send_request: stop_status
+2024-03-13 13:09:10,694 DEBUG   SenderThread:17068 [sender.py:send():382] send: telemetry
+2024-03-13 13:09:10,964 INFO    Thread-16 :17068 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\kkwan\devDir\marl\wandb\run-20240313_130907-c7tl9jcd\files\wandb-metadata.json
+2024-03-13 13:09:10,964 INFO    Thread-16 :17068 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\kkwan\devDir\marl\wandb\run-20240313_130907-c7tl9jcd\files\requirements.txt
+2024-03-13 13:09:11,145 INFO    wandb-upload_0:17068 [upload_job.py:push():131] Uploaded file C:\Users\kkwan\AppData\Local\Temp\tmpvoabn4pvwandb\8dspf0ri-wandb-metadata.json
+2024-03-13 13:09:12,703 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 13:09:12,970 INFO    Thread-16 :17068 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\kkwan\devDir\marl\wandb\run-20240313_130907-c7tl9jcd\files\output.log
+2024-03-13 13:09:13,634 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:13,634 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:14,978 INFO    Thread-16 :17068 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\kkwan\devDir\marl\wandb\run-20240313_130907-c7tl9jcd\files\output.log
+2024-03-13 13:09:16,887 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:16,887 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:17,963 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 13:09:20,040 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:20,040 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:23,025 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 13:09:23,183 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:23,183 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:26,772 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:26,772 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:28,064 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 13:09:28,815 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-13 13:09:31,363 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:31,363 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:33,086 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 13:09:33,857 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:33,857 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:36,995 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:36,995 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 13:09:38,141 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 13:09:39,170 INFO    Thread-16 :17068 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\kkwan\devDir\marl\wandb\run-20240313_130907-c7tl9jcd\files\config.yaml
+2024-03-13 14:06:04,199 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-13 14:06:05,146 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 14:06:06,512 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 14:06:06,512 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 14:06:09,569 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 14:06:09,575 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 14:06:10,176 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 14:06:11,590 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-13 14:06:13,599 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 14:06:13,599 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 14:06:13,599 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 14:06:13,599 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 14:06:13,599 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 14:06:13,599 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-13 14:06:13,599 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:42,248 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-03-15 11:00:42,270 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:00:42,280 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: Unknown Error
+2024-03-15 11:00:42,280 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: Unknown Error
+2024-03-15 11:00:42,280 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: Unknown Error
+2024-03-15 11:00:42,280 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: Unknown Error
+2024-03-15 11:00:42,280 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: Unknown Error
+2024-03-15 11:00:42,280 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: Unknown Error
+2024-03-15 11:00:42,281 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:42,281 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:42,281 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:42,281 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:42,281 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:42,281 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:42,281 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:44,341 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:00:44,750 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC3F0820>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-03-15 11:00:47,330 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:00:48,146 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:00:49,090 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC3F0820>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-03-15 11:00:51,038 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:51,038 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:52,505 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:00:53,982 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:00:57,177 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:57,177 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:00:57,657 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:00:58,185 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC3F0820>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-03-15 11:01:00,269 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:00,269 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:01,740 DEBUG   SystemMonitor:17068 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-03-15 11:01:01,740 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:01:02,742 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:02,855 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:02,855 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:04,960 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:04,960 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:07,785 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:08,084 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:08,084 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:11,161 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:11,161 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:12,816 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:14,278 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:14,278 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:14,369 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC4170D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-03-15 11:01:17,366 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:17,366 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:17,845 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:20,453 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:20,453 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:22,878 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:23,545 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:23,545 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:26,761 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:01:27,896 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:29,856 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:29,856 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:31,748 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:01:32,943 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:32,944 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:33,763 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:36,023 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:36,024 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:38,786 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:39,127 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:39,127 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:42,198 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:42,198 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:43,826 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:45,299 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:45,299 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:48,390 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:48,390 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:48,861 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:49,897 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC417A90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-03-15 11:01:51,451 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:51,451 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:53,892 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:01:54,536 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:54,536 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:57,608 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:57,608 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:01:58,912 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:00,670 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:00,670 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:01,762 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:02:03,741 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:03,741 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:04,777 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:06,813 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:06,813 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:09,823 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:09,889 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:09,889 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:13,069 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:02:14,860 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:16,218 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:16,218 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:18,254 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:18,254 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:19,909 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:20,327 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:02:23,540 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:02:25,219 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:26,689 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:26,689 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:29,906 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:02:30,267 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:31,774 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:02:33,062 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:33,062 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:35,852 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:36,205 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:36,205 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:39,355 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:39,355 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:41,037 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:42,610 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:02:45,767 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:45,767 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:46,174 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:48,944 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:48,968 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:02:51,229 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:52,095 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:52,095 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:55,285 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:55,285 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:02:56,260 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:02:57,501 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC417100>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-03-15 11:02:58,649 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:03:01,463 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:01,777 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:03:01,793 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:01,793 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:04,949 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:04,949 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:06,838 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:08,095 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:08,095 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:11,265 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:11,265 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:12,251 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:14,426 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:14,426 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:17,313 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:17,612 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:17,612 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:20,772 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:20,772 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:22,351 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:23,924 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:23,924 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:27,062 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:27,062 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:27,376 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:30,201 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:30,201 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:31,778 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:03:32,794 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:33,354 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:33,354 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:36,516 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:36,516 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:37,823 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:39,673 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:39,673 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:42,777 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:42,777 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:42,858 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:46,005 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:03:47,891 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:49,177 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:49,177 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:52,318 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:52,318 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:52,939 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:55,495 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:55,495 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:57,987 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:03:58,653 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:03:58,653 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:01,784 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:04:01,784 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:01,784 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:03,800 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:04,930 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:04,930 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:06,938 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:06,938 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:08,852 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:10,084 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:10,084 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:12,100 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:04:13,882 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:14,105 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:04:17,635 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:17,635 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:18,907 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:20,774 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:20,774 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:23,914 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:23,914 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:23,930 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:25,935 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:04:28,069 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:04:28,963 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:31,219 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:31,219 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:31,786 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:04:33,228 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:04:34,801 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:36,368 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:36,368 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:39,530 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:39,530 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:39,845 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:42,696 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:42,697 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:44,711 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:04:44,867 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:46,744 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:04:49,900 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:49,900 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:49,926 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:53,043 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:53,043 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:04:54,957 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:04:55,051 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:04:57,078 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:04:59,082 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:05:00,009 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:01,091 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:05:01,797 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:05:03,118 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:05:05,817 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:06,336 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:05:09,515 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:09,515 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:10,843 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:12,648 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:12,648 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:15,377 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC4178B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-03-15 11:05:15,810 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:15,810 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:15,868 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:18,962 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:18,962 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:20,893 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:22,151 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:22,151 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:25,285 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:25,285 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:25,919 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:28,432 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:28,432 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:30,939 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:31,607 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:31,607 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:31,812 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:05:34,778 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:34,778 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:36,873 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:37,967 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:37,968 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:41,138 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:41,138 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:41,904 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:44,290 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:44,290 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:05:46,307 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:05:46,944 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:48,330 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:05:51,954 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:05:51,992 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:53,968 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:05:55,970 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:05:57,017 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:05:57,998 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:00,034 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:01,828 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:06:02,052 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:02,833 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:04,063 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:07,218 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:07,218 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:07,882 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:10,393 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:10,393 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:13,018 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:13,552 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:13,552 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:16,705 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:16,705 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:18,574 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:19,876 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:19,876 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:23,011 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:23,011 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:23,604 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:26,116 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:26,116 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:28,890 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:29,256 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:29,256 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:31,828 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:06:32,490 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:35,283 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:35,630 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:35,630 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:38,761 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:38,762 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:40,560 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:40,766 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:42,779 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:44,808 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:45,593 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:46,851 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:48,878 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:50,625 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:50,907 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:06:54,079 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:54,079 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:55,723 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:06:57,216 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:06:57,216 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:00,404 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:00,404 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:01,048 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:01,833 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:07:03,527 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:03,527 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:05,551 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:06,994 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:08,707 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:08,707 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:10,810 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:12,017 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:12,817 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:16,149 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:16,149 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:17,043 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:18,157 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:20,165 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:22,062 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:22,172 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:24,178 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:26,202 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:27,082 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:28,214 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:31,368 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:31,368 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:31,839 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:07:32,844 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:34,506 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:34,506 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:37,679 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:37,679 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:37,867 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:40,836 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:40,836 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:42,915 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:44,010 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:44,010 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:46,061 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:46,061 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:47,968 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:49,288 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:52,449 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:52,449 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:07:53,000 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:54,476 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:56,485 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:07:58,022 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:07:58,508 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:08:00,520 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:08:01,854 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:08:02,528 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:08:03,859 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:04,547 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:08:08,047 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:08,047 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:08,880 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:11,192 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:11,192 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:13,921 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:14,322 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:14,322 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:17,471 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:17,471 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:18,953 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:20,626 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:20,626 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:23,758 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:23,758 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:23,993 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:26,887 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:26,887 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:29,049 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:29,064 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:08:31,869 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:08:32,217 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:32,217 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:34,898 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:35,359 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:35,359 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:38,483 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:38,483 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:39,932 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:41,620 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:41,621 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:44,791 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:44,795 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:44,964 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:47,947 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:47,947 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:50,009 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:50,044 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:50,045 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:53,191 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:53,191 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:55,034 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:08:56,324 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:56,324 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:08:58,333 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:00,058 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:00,341 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:01,878 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:09:03,480 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:03,480 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:05,914 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:06,601 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:06,601 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:08,608 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:10,950 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:11,843 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:14,988 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:14,989 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:16,010 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:18,102 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:18,102 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:21,083 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:21,240 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:21,240 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:24,397 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:24,398 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:26,118 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:27,531 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:27,531 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:30,686 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:30,686 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:31,174 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:31,889 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:09:33,840 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:33,840 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:36,925 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC3F03D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-03-15 11:09:36,940 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:36,972 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:36,972 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:09:38,987 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:41,017 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:41,985 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:43,029 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:45,041 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:47,011 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:47,043 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:49,052 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:52,030 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:52,291 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:54,335 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:56,351 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:09:57,065 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:09:58,369 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:10:01,506 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:01,506 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:01,899 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:10:02,905 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:04,642 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:04,642 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:07,797 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:07,797 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:07,939 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:10,925 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:10,925 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:12,972 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:14,068 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:14,068 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:17,202 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:17,202 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:18,090 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:20,320 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:20,320 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:23,141 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:23,593 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:10:26,755 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:26,829 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:28,448 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:29,973 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:29,973 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:31,913 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:10:33,151 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:33,152 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:33,928 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:36,814 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:10:39,617 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:39,927 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:39,927 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:43,141 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:43,141 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:44,745 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:46,432 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:46,432 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:48,444 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:10:49,784 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:50,648 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:10:53,796 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:53,796 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:10:55,614 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:10:57,030 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:00,246 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:01,025 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:01,919 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:11:03,458 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:05,467 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:06,996 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:08,715 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:11,891 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:11,892 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:12,050 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:15,052 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:15,052 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:17,074 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:17,090 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:19,192 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:21,204 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:22,099 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:23,227 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:25,237 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:27,122 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:27,264 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:30,410 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:30,410 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:31,932 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:11:32,938 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:33,551 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:33,551 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:36,690 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:36,690 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:37,962 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:39,833 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:39,833 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:42,990 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:42,990 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:43,003 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:46,133 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:46,133 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:48,033 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:49,292 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:49,292 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:11:51,310 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:53,060 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:53,312 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:55,319 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:57,439 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:11:58,081 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:11:59,465 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:12:01,496 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:12:01,936 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:12:03,944 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:04,674 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:04,674 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:07,842 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:07,842 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:08,993 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:10,975 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:10,975 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:14,035 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:14,136 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:14,136 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:17,284 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:17,284 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:19,075 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:20,409 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:20,409 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:23,550 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:23,550 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:24,119 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:26,710 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:26,711 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:29,166 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:29,851 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:29,851 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:31,948 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-03-15 11:12:33,001 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:33,001 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:34,968 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:36,159 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:36,159 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:38,192 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:12:39,990 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:41,704 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:12:44,856 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:44,856 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:45,027 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:46,861 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:12:48,869 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-03-15 11:12:50,046 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:51,743 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:51,743 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:53,770 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:53,770 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:53,770 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:53,770 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:53,770 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:53,770 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:53,770 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:55,073 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-03-15 11:12:55,778 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:55,778 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:55,778 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:55,778 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:55,778 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:55,778 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-03-15 11:12:55,778 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:10,737 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:29:14,415 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:29:14,777 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:29:15,782 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:29:16,456 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:29:18,684 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:18,684 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:20,807 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:29:21,670 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:21,670 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:23,698 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:23,698 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:25,824 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:29:26,783 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:26,783 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:29,855 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:29,855 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:30,843 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:29:32,934 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:32,934 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:35,871 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:29:36,107 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:29:39,154 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:39,154 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:40,902 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:29:42,208 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:42,208 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:44,786 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:29:45,292 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:45,293 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:46,797 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:29:48,365 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:48,365 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:51,430 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:51,430 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:51,825 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:29:54,497 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:54,497 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:56,854 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:29:57,687 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:29:57,687 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:00,749 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:00,749 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:01,881 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:02,825 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:02,825 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:05,900 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:05,900 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:06,905 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:08,961 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:08,961 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:11,929 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:12,024 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:12,024 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:14,800 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:30:15,083 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:15,083 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:17,815 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:18,145 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:18,145 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:21,331 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:30:22,839 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:24,394 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:24,394 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:27,459 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:27,459 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:27,867 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:30,531 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:30,531 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:32,893 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:33,596 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:33,596 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:36,640 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:36,655 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:37,928 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:39,752 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:39,752 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:42,856 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:42,856 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:42,947 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:44,801 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:30:45,916 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:45,916 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:47,937 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:30:48,819 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:51,048 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:51,048 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:53,842 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:30:54,119 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:54,119 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:57,175 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:57,175 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:30:58,871 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:00,269 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:00,269 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:03,346 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:03,346 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:03,905 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:06,510 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:31:08,927 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:09,572 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:09,572 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:12,635 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:12,635 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:13,957 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:14,806 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:31:15,710 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:15,710 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:18,768 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:18,768 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:19,836 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:21,832 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:21,833 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:24,871 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:24,898 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:24,898 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:27,968 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:27,968 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:29,895 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:31,028 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:31,028 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:34,106 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:34,106 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:34,923 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:37,169 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:37,169 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:39,952 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:40,253 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:40,253 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:43,312 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:43,312 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:44,820 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:31:45,830 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:46,382 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:46,382 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:49,448 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:49,448 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:50,853 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:52,601 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:31:55,695 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:55,695 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:55,890 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:31:57,395 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC3F0D00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-04-03 11:31:58,772 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:31:58,772 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:00,911 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:01,821 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:01,821 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:04,933 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:04,933 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:05,940 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:08,023 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:08,023 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:10,958 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:11,100 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:11,100 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:14,167 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:14,167 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:14,821 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:32:16,829 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:17,222 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:17,222 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:20,306 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:20,306 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:21,859 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:23,363 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:23,363 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:26,432 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:26,432 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:26,877 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:29,505 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:29,505 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:31,912 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:32,560 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:32,560 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:35,591 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:35,591 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:36,941 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:38,729 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:38,729 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:41,808 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:41,808 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:41,964 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:44,840 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:32:44,856 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:44,856 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:47,868 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:47,915 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:47,915 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:50,975 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:50,975 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:52,937 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:32:54,037 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:54,037 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:57,103 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:57,103 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:32:57,963 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:00,159 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:00,159 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:02,984 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:03,218 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:03,218 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:06,276 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:06,276 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:08,004 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:09,338 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:09,338 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:12,402 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:12,402 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:13,027 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:14,846 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:33:15,459 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:15,459 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:18,522 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:18,522 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:18,868 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:21,596 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:21,596 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:23,897 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:24,712 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-04-03 11:33:24,715 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:24,715 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:27,818 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:27,818 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:28,922 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:30,884 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:30,884 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:33,932 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:33,932 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:33,948 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:36,993 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:36,993 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:38,969 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:40,037 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:40,037 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:43,106 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:43,106 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:43,993 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:44,857 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:33:46,160 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:46,160 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:49,223 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:49,223 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:49,881 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:52,298 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:52,298 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:54,903 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:33:55,406 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:55,406 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:58,482 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:58,482 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:33:59,926 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:01,527 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:01,527 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:04,587 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:04,587 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:04,948 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:07,646 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:07,646 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:09,968 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:10,785 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-04-03 11:34:10,801 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:34:13,863 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:13,863 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:14,860 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:34:15,869 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:16,938 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:16,938 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:20,003 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:20,004 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:20,915 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:23,097 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:23,097 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:25,941 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:26,161 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:26,161 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:29,234 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:29,234 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:30,966 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:32,316 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:32,316 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:35,404 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:35,404 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:36,021 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:38,513 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:38,513 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:41,077 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:41,595 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:41,595 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:44,675 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:44,675 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:44,860 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:34:46,889 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:47,777 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:47,777 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:50,868 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:50,868 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:51,924 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:53,928 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:53,928 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:34:56,939 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:34:57,085 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:35:00,121 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:00,137 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:01,957 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:03,228 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:03,228 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:06,296 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:06,296 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:07,019 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:09,377 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:09,378 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:11,380 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:11,380 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:12,057 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:14,430 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:14,430 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:14,869 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:35:17,511 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:17,511 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:17,889 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:20,578 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:20,586 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:22,913 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:23,651 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:23,651 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:26,707 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:26,707 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:27,946 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:29,768 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:29,768 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:32,817 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:32,817 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:32,974 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:35,898 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:35,898 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:38,006 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:38,996 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:38,996 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:42,137 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:35:43,030 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:44,885 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:35:45,199 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:45,199 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:48,261 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:48,261 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:48,905 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:51,321 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:51,321 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:53,924 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:35:54,380 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:54,380 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:57,444 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:57,444 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:35:58,951 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:00,506 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:00,506 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:03,566 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:03,566 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:03,990 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:06,628 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:06,628 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:09,013 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:09,690 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:09,690 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:12,796 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:12,796 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:14,070 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:14,888 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:36:15,862 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:15,862 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:18,923 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:18,923 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:19,913 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:22,013 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:22,013 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:24,955 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:25,081 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:25,081 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:28,222 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:28,222 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:29,991 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:31,292 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:31,292 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:34,358 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:34,358 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:35,019 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:37,436 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:37,436 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:40,043 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:40,499 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:40,499 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:43,570 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:43,570 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:44,888 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:36:45,892 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:46,614 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:46,614 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:49,680 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:49,680 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:50,925 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:52,762 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:52,762 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:55,818 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:55,818 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:55,953 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:36:58,877 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:36:58,877 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:00,982 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:01,941 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:01,941 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:05,005 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:05,005 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:06,010 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:08,067 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:08,067 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:11,034 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:11,128 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:11,128 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:14,256 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-04-03 11:37:14,272 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:37:14,899 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:37:16,910 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:17,334 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:17,334 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:20,398 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:20,398 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:21,938 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:23,478 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:23,478 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:25,498 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:37:26,966 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:28,581 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:28,581 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:31,666 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:31,666 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:31,996 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:34,729 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:34,729 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:37,022 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:37,792 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:37,792 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:40,886 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:40,886 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:42,047 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:43,961 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:43,961 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:44,903 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:37:47,036 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:47,036 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:47,914 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:48,087 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC41B9A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-04-03 11:37:50,096 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:50,096 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:52,938 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:53,157 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:53,157 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:56,219 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:56,219 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:37:57,961 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:37:59,374 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:38:02,434 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:02,434 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:03,015 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:05,496 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:05,496 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:08,042 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:08,575 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:08,575 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:11,651 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:11,651 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:13,065 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:14,721 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:14,721 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:14,910 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:38:17,810 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:17,810 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:18,939 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:20,860 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:20,860 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:23,920 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:23,920 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:23,968 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:26,971 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:26,971 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:29,027 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:30,035 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:30,035 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:33,100 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:33,100 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:34,060 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:36,164 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:36,164 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:39,095 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:39,236 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:39,236 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:42,311 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:42,311 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:44,134 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:44,925 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:38:45,476 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:45,476 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:48,536 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:48,542 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:49,967 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:51,623 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:51,623 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:54,716 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:54,717 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:55,058 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:38:57,780 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:38:57,780 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:00,089 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:00,834 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:00,834 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:03,893 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:03,893 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:05,117 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:06,955 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:06,955 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:10,025 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:10,025 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:10,143 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:13,102 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:13,102 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:14,926 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:39:15,932 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:16,169 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:16,169 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:19,241 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:19,241 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:20,965 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:22,301 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:22,301 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:25,363 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:25,363 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:25,991 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:28,443 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:28,443 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:31,023 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:31,575 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-04-03 11:39:31,590 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:31,590 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:34,655 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:34,655 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:36,070 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:37,738 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:37,738 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:40,824 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:40,824 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:41,123 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:43,886 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:43,886 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:44,926 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:39:46,937 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:46,981 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:46,981 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:50,049 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:50,049 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:51,968 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:53,115 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:53,115 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:56,181 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:56,181 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:57,002 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:39:59,263 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:39:59,263 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:02,028 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:02,325 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:02,325 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:05,390 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:05,390 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:07,059 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:08,481 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:08,481 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:11,539 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:11,539 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:12,090 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:14,602 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:14,602 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:14,932 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:40:17,701 ERROR   gpu       :17068 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-04-03 11:40:17,715 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:40:17,951 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:20,768 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:20,768 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:22,981 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:23,848 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:23,848 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:26,919 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:26,919 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:28,015 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:30,002 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:30,002 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:33,053 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:33,069 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:33,069 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:36,136 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:36,136 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:38,082 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:39,183 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:39,183 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:42,226 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:42,226 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:43,105 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:44,933 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:40:45,309 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:45,309 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:48,380 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:48,380 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:48,962 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:51,442 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:51,442 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:54,005 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:40:54,508 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:54,508 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:57,559 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:57,559 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:40:59,040 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:00,626 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:00,626 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:03,800 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:41:04,070 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:06,853 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:06,853 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:09,099 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:09,923 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:09,931 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:13,013 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:13,013 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:14,132 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:14,933 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:41:16,094 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:16,094 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:19,156 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:19,156 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:19,959 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:22,220 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:22,220 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:24,989 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:25,273 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:25,273 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:28,367 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:28,367 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:30,015 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:31,417 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:31,417 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:34,469 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:34,469 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:35,052 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:37,533 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:37,533 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:40,081 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:40,598 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:40,598 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:43,658 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:43,658 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:44,945 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:41:45,950 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:46,720 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:46,720 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:49,858 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:41:50,972 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:52,903 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:52,903 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:55,949 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:55,949 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:55,996 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:41:59,040 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:41:59,040 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:01,019 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:02,112 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:02,112 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:05,179 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:05,179 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:06,042 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:08,242 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:08,242 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:11,064 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:11,300 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:11,300 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:14,362 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:14,362 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:14,955 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:42:16,964 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:17,419 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:17,419 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:20,494 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:20,494 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:22,063 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:23,583 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:23,583 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:26,658 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:26,658 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:27,111 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:29,736 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:29,736 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:32,143 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:32,835 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:32,835 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:35,992 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:42:37,169 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:39,086 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:39,086 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:42,136 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:42,136 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:42,198 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:44,966 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:42:45,219 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:45,219 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:47,983 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:48,297 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:48,297 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:51,395 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:51,395 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:53,030 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:42:54,476 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:54,476 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:57,604 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:57,604 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:42:58,072 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:00,719 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:00,719 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:03,089 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:03,836 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:03,837 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:07,003 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:07,003 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:08,104 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:10,112 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:10,112 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:13,130 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:13,230 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:13,231 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:14,978 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:43:16,386 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:16,386 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:18,990 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:19,477 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:19,477 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:22,713 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:43:24,016 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:25,855 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:25,855 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:28,947 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:28,947 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:29,041 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:32,027 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:32,027 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:34,067 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:35,155 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:35,155 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:38,256 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:38,256 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:39,092 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:41,367 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:41,367 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:43,854 WARNING FileStreamThread:17068 [file_stream.py:request_with_retry():668] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021AFC435280>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')). func: functools.partial(<bound method Session.post of <requests.sessions.Session object at 0x0000021AFB2867C0>>, timeout=180), args: ('https://api.wandb.ai/files/biorobotics-marl/rllib-MAPPO-customenv_simplespread/c7tl9jcd/file_stream',), kwargs: {'json': {'complete': False, 'failed': False, 'dropped': 0, 'uploaded': []}}
+2024-04-03 11:43:44,120 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:44,497 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:44,497 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:44,983 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:43:47,619 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:47,619 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:50,006 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:50,743 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:50,743 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:53,883 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:53,883 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:55,027 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:43:57,005 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:43:57,005 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:00,050 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:00,113 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:00,113 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:03,205 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:03,205 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:05,072 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:06,313 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:06,313 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:09,519 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:44:10,101 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:12,630 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:12,630 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:14,998 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:44:15,751 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:15,751 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:16,003 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:18,846 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:18,846 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:21,030 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:21,925 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:21,925 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:25,034 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:25,034 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:26,057 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:28,114 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:28,114 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:31,077 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:31,172 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:31,172 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:34,250 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:34,250 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:36,107 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:37,320 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:37,320 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:40,406 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:40,406 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:41,119 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:43,483 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:43,483 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:44,999 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:44:46,539 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:46,540 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:47,015 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:49,605 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:49,605 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:52,039 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:52,652 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:52,652 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:55,793 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:44:57,066 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:44:58,856 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:44:58,856 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:01,917 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:01,917 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:02,095 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:04,973 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:04,973 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:07,127 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:08,043 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:08,043 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:11,104 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:11,104 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:12,157 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:14,156 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:14,156 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:15,002 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:45:17,203 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:17,203 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:18,019 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:20,258 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:20,258 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:23,044 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:23,326 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:23,326 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:26,388 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:26,388 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:28,098 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:29,433 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:29,433 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:32,510 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:32,510 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:33,123 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:35,572 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:35,572 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:38,146 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:38,633 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:38,633 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:41,821 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:45:43,174 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:44,895 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:44,895 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:45,004 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:45:47,977 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:47,977 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:49,027 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:51,067 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:51,067 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:54,064 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:45:54,144 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:54,144 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:57,204 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:57,204 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:45:59,102 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:46:00,279 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:00,279 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:03,342 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:03,343 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:04,128 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:46:06,435 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:06,435 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:09,168 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:46:09,528 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:09,528 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:12,623 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:12,624 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:14,239 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:46:15,020 DEBUG   SenderThread:17068 [sender.py:send():382] send: stats
+2024-04-03 11:46:15,694 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:15,694 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:17,708 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:17,708 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Unknown Error
+2024-04-03 11:46:19,722 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:46:20,077 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:46:21,732 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:46:23,822 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:46:25,113 DEBUG   HandlerThread:17068 [handler.py:handle_request():146] handle_request: status_report
+2024-04-03 11:46:25,841 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2024-04-03 11:46:27,864 ERROR   gpu       :17068 [interfaces.py:monitor():144] Failed to sample metric: Not Supported

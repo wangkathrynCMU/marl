@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.10",
+    "heartbeatAt": "2024-03-13T17:09:10.474220",
+    "startedAt": "2024-03-13T17:09:07.486373",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": ".\\custom_multiagent_env_rllib.py",
+    "codePathLocal": "custom_multiagent_env_rllib.py",
+    "codePath": "custom_multiagent_env_rllib.py",
+    "git": {
+        "remote": "https://github.com/wangkathrynCMU/marl.git",
+        "commit": "f5d420ccedea0c26c48cb386697d96aa859d4d71"
+    },
+    "email": "kwang3@andrew.cmu.edu",
+    "root": "C:/Users/kkwan/devDir/marl",
+    "host": "Kathryn_Wang",
+    "username": "kkwan",
+    "executable": "C:\\Users\\kkwan\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+    "cpu_count": 16,
+    "cpu_count_logical": 24,
+    "cpu_freq": {
+        "current": 1506.0,
+        "min": 0.0,
+        "max": 2300.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1506.0,
+            "min": 0.0,
+            "max": 2300.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1884.4374809265137,
+            "used": 171.35108947753906
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3080 Ti Laptop GPU",
+            "memory_total": 17179869184
+        }
+    ],
+    "memory": {
+        "total": 63.629573822021484
+    }
+}

@@ -61,8 +61,8 @@ config = PPOConfig() \
         entropy_coeff=0.01,
         clip_param=0.2,
         vf_loss_coeff=1.0,
-        checkpoint_freq=10,
-        checkpoint_at_end=True
+        # checkpoint_frequency=10,
+        # checkpoint_at_end=True
     ) \
     .resources(num_gpus=1) \
     .rollouts(num_rollout_workers=4) \

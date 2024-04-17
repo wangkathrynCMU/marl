@@ -1,0 +1,23 @@
+2024-03-13 13:09:12,910	ERROR services.py:1329 -- Failed to start the dashboard , return code 1
+2024-03-13 13:09:12,910	ERROR services.py:1354 -- Error should be written to 'dashboard.log' or 'dashboard.err'. We are printing the last 20 lines for you. See 'https://docs.ray.io/en/master/ray-observability/ray-logging.html#logging-directory-structure' to find where the log file is.
+2024-03-13 13:09:12,911	ERROR services.py:1398 --
+The last 20 lines of C:\Users\kkwan\AppData\Local\Temp\ray\session_2024-03-13_13-09-11_209058_17764\logs\dashboard.log (it contains the error message from the dashboard):
+  File "C:\Users\kkwan\AppData\Local\Programs\Python\Python38\lib\site-packages\ray\dashboard\dashboard.py", line 75, in run
+    await self.dashboard_head.run()
+  File "C:\Users\kkwan\AppData\Local\Programs\Python\Python38\lib\site-packages\ray\dashboard\head.py", line 325, in run
+    modules = self._load_modules(self._modules_to_load)
+  File "C:\Users\kkwan\AppData\Local\Programs\Python\Python38\lib\site-packages\ray\dashboard\head.py", line 219, in _load_modules
+    head_cls_list = dashboard_utils.get_all_modules(DashboardHeadModule)
+  File "C:\Users\kkwan\AppData\Local\Programs\Python\Python38\lib\site-packages\ray\dashboard\utils.py", line 121, in get_all_modules
+    importlib.import_module(name)
+  File "C:\Users\kkwan\AppData\Local\Programs\Python\Python38\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\kkwan\AppData\Local\Programs\Python\Python38\lib\site-packages\ray\dashboard\modules\log\log_manager.py", line 26, in <module>
+    class ResolvedStreamFileInfo(BaseModel):
+TypeError: NoneType takes no arguments

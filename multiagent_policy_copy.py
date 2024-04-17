@@ -1,3 +1,4 @@
+# compare trajectories during training
 import os
 import numpy as np
 
@@ -27,6 +28,12 @@ from reward_model_transformer import RewardDynamicsTransformer
 folder = "model_checkpoints\\single_agent_policy"
 
 comet = True
+if comet:
+    experiment = Experiment(
+        api_key="s8Nte4JHNGudFkNjXiJ9RpofM",
+        project_name="single-agent-policy-transformer",
+        workspace="wangkathryncmu"
+        )
     # experiment = Experiment(
     #     api_key="s8Nte4JHNGudFkNjXiJ9RpofM",
     #     project_name="marl-policy",
@@ -40,6 +47,12 @@ device = 'cpu'
 if torch.cuda.is_available():
     device = torch.device('cuda:0')
 
+env_config = {
+        'N':1, 
+        'local_ratio': 0.5, 
+        'max_cycles': 100, 
+        'continuous_actions': True
+    }
 
 def sample_action(env, agents):
     action = {}
@@ -105,6 +118,22 @@ class MultiAgentPolicyModel(nn.Module):
             index +=1
 
         return output
+
+def log_trajectories_to_wandb(real_traj, predicted_traj, episode, phase):
+    # Convert trajectories to numpy arrays
+    real_traj = np.array(real_traj)
+    predicted_traj = np.array(predicted_traj)
+
+    # Plot trajectories
+    fig, ax = plt.subplots()
+    ax.plot(real_traj[:, 0], real_traj[:, 1], label='Real')
+    ax.plot(predicted_traj[:, 0], predicted_traj[:, 1], label='Predicted')
+    ax.legend()
+
+    # Log the plot to WandB
+    wandb.log({f"{phase}_episode_{episode}": [wandb.Image(plt, caption="Trajectories")]})
+    plt.close(fig)
+    
 def train(model, state_model, reward_model, opt, env, batch_size, ep_len, episodes, n_agents, device):
     model.to(device)
     state_model.to(device)
@@ -116,6 +145,9 @@ def train(model, state_model, reward_model, opt, env, batch_size, ep_len, episod
 
         states = []
 
+        real_traj = []
+        predicted_traj = []
+
         for j in range(batch_size):
             state_dict, _ = env.reset()
             states.append(dict_to_torch(state_dict))
@@ -124,17 +156,28 @@ def train(model, state_model, reward_model, opt, env, batch_size, ep_len, episod
         states = states.cuda()
 
         cumulative_loss = 0
+
+        real_traj = []
+        predicted_traj = []
+        real_traj.append(states.cpu().numpy())
+        predicted_traj.append(states.cpu().numpy())
         
         for t in range(ep_len):
             actions = model(states)
             next_states = state_model.sample_next_state(states, actions)
-            # print("states shape", states.shape)
-            # print("actions shape", actions.shape)
             rewards = reward_model.sample_next_reward(states, actions)
-            # print("rewards", rewards)
+            
+            real_next_states, rewards, done, _, _ = env.step(torch_to_dict(actions))
+
             loss_t = -rewards.sum()/ (n_agents * batch_size)
             cumulative_loss += loss_t
             states = next_states
+            
+            real_traj.append(states.cpu().numpy())
+            predicted_traj.append(dict_to_numpy(real_next_states))
+        
+        log_trajectories_to_wandb(real_traj, predicted_traj, episode, 'train')
+
         # Normalize the loss by the number of steps
         normalized_loss = cumulative_loss/ ep_len
         # print("normalized loss", normalized_loss)
@@ -180,76 +223,6 @@ def validate(model, env, ep_len, n_epochs, device, n_agents, agents):
 
     return np.mean(losses)
 
-
-def plot_dynamics_vs_environment(env, dynamics_model, policy_model):
-    #looking at agent trajectory in dynamics model vs. real environment
-    import matplotlib.pyplot as plt
-    import copy
-
-    state, info = env.reset()
-    actualx = []
-    actualy = []
-    actualr = []
-
-    predictedx = []
-    predictedy = []
-    predictedr = []
-
-    predicted_state = copy.deepcopy(state)
-    predicted_state = dict_to_torch(predicted_state)
-    state_arr = dict_to_numpy(state)
-    
-    # predicted_state = predicted_state[None, :,:]
-    frames = []
-    
-    policy = policy.cpu()
-    reward_dynamics = 0
-    reward_env = 0
-    with torch.no_grad():
-        for i in range(ep_len):
-            action = policy_model.forward_to_dictionary(predicted_state)
-            action_tensor = dict_to_torch(action)            
-
-            predictedx = np.concatenate((predictedx, predicted_state[:,2].numpy().reshape(-1, 1)), axis = 1)
-            predictedy = np.concatenate((predictedy, predicted_state[:,3].numpy().reshape(-1, 1)), axis = 1)
-            # print(reward_dynamics)
-            reward_dynamics += torch.mean(predicted_rewards).item()
-            # print("dynamics reward", predicted_rewards, torch.mean(predicted_rewards).item())
-            predictedr.append(reward_dynamics)
-
-            obs, reward, terminated, info = env.step(action)
-            env.observation_space(agent)
-
-            obs_arr = np.matrix(dict_to_numpy(obs))
-            actualx = np.concatenate((actualx, obs_arr[:,2]), axis = 1)
-            actualy = np.concatenate((actualy, obs_arr[:,3]), axis = 1)
-
-            reward_arr = dict_to_numpy(reward)
-            # print("env reward", reward_arr, np.mean(reward_arr))
-            reward_env += np.mean(reward_arr)
-            actualr.append(reward_env)
-
-    plt.plot(0)
-    plt.plot(actualx[0].T, actualy[0].T, label = "agent 1 actual")
-    plt.plot(actualx[1].T, actualy[1].T, label = "agent 2 actual")
-    plt.plot(actualx[2].T, actualy[2].T, label = "agent 3 actual")
-    plt.plot(predictedx[0].T, predictedy[0].T, label = "agent 1 predicted")
-    plt.plot(predictedx[1].T, predictedy[1].T, label = "agent 2 predicted")
-    plt.plot(predictedx[2].T, predictedy[2].T, label = "agent 3 predicted")
-    plt.legend()
-    plt.savefig('position_plot.png')
-    plt.show()
-
-    plt.plot(1)
-    x1 = np.array([range(len(predictedr))]).transpose()
-    plt.plot(x1, predictedr, label = "r predicted")
-    plt.plot(x1, actualr, label = "r actual")
-    plt.legend()
-    plt.savefig('reward_plot.png')
-    plt.show()
-
-    env.close()
-
 def checkpoints_path(folder):
     current_time = datetime.now()
     str_date_time = current_time.strftime("%m_%d_%Y_%H_%M_%S")
@@ -264,19 +237,6 @@ def checkpoints_path(folder):
 
 
 if __name__ == '__main__':
-    env_config = {
-        'N':1, 
-        'local_ratio': 0.5, 
-        'max_cycles': 100, 
-        'continuous_actions': True
-    }
-    
-    if comet:
-        experiment = Experiment(
-            api_key="s8Nte4JHNGudFkNjXiJ9RpofM",
-            project_name="single-agent-policy-transformer",
-            workspace="wangkathryncmu"
-            )
     # PATH = ".\\all_checkpoints_transformer\\transformer_11_04_2022_12_26_39_simple_spread_v2_wd_0.001_lr_0.0001_hdim_256\\transformer_Decay_best_loss_-1.799452094718725.pth"
     # PATH = ".\\all_checkpoints_transformer\\transformer_11_04_2022_12_26_39_simple_spread_v2_wd_0.001_lr_0.0001_hdim_256\\copy_transformer_Decay_best_loss_-1.799452094718725.pth"
     # PATH = ".\\all_checkpoints_transformer\\transformer_10_26_2022_07_51_40_simple_spread_v2_wd_0.001_lr_0.0001_hdim_512\\transformer_Decay_best_loss_-1.8287531244372266.pth"
@@ -471,26 +431,4 @@ if __name__ == '__main__':
 #     vec_env.close()  # Close the vectorized environment when done
 #     return np.mean(losses)
 
-# PLOTTING
-
-def plot_dynamics_vs_environment(env, dynamics_model, policy_model):
-
-    with torch.no_grad():
-        for i in range(5):
-            state_dict = env.reset()
-            state = dict_to_torch(state_dict)
-            agents = env.agents
-
-            frames = []
-            for j in range(100):
-                env.render()
-                frames.append(env.render(mode="rgb_array"))
-                action = policy_model.forward_to_dictionary(state)
-                obs, reward, terminated, info = env.step(action)
-                state = dict_to_torch(obs)
-
-            save_frames_as_gif(frames, filename='gym_animation_' + str(i) + '.gif')
-
-    
-
-        
+# PLOTTING    

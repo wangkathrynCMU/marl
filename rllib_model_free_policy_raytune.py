@@ -9,19 +9,24 @@ from ray.rllib.algorithms.callbacks import DefaultCallbacks
 from ray.rllib.env.wrappers.pettingzoo_env import ParallelPettingZooEnv
 from ray.tune.registry import register_env
 from torch import nn
+import wandb
+
+from ray.air.integrations.wandb import WandbLoggerCallback
+
 
 from pettingzoo.mpe import simple_spread_v3
 
 class MyCustomCallbacks(DefaultCallbacks):
-    def __init__(self):
-        super().__init__()
-        # Define the file path
-        self.file_path = os.path.join('logs', 'obs_actions_rewards_log.csv')
-        os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
-        # Open the file and write the headers
-        with open(self.file_path, "w", newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["Episode ID", "Step", "Agent ID", "Observation", "Action", "Reward"])
+    pass
+    # def __init__(self):
+    #     super().__init__()
+    #     # Define the file path
+    #     self.file_path = os.path.join('logs', 'obs_actions_rewards_log.csv')
+    #     os.makedirs(os.path.dirname(self.file_path), exist_ok=True)
+    #     # Open the file and write the headers
+    #     with open(self.file_path, "w", newline='') as file:
+    #         writer = csv.writer(file)
+    #         writer.writerow(["Episode ID", "Step", "Agent ID", "Observation", "Action", "Reward"])
 
     # def on_episode_step(self, *, worker, base_env, policies, episode, env_index, **kwargs):
     #     # Log observations, actions, and rewards for each agent
@@ -48,6 +53,8 @@ def env_creator(args):
     return env
 
 if __name__ == "__main__":
+    wandb.init(project="rllib-MAPPO-simplespread", entity="biorobotics-marl")
+
     ray.init()
 
     env_name = "simple_spread_v3"
@@ -60,18 +67,18 @@ if __name__ == "__main__":
         .rollouts(num_rollout_workers=4, rollout_fragment_length=128)
         .training(
             train_batch_size=512,
-            lr=2e-5,
-            gamma=0.99,
-            lambda_=0.9,
+            lr=2e-4,
+            gamma=0.9,
+            # lambda_=0.9,
             use_gae=True,
-            clip_param=0.4,
-            grad_clip=None,
-            entropy_coeff=0.1,
-            vf_loss_coeff=0.25,
-            sgd_minibatch_size=64,
+            # clip_param=0.4,
+            grad_clip=0.5,
+            # entropy_coeff=0.1,
+            # vf_loss_coeff=0.25,
+            # sgd_minibatch_size=64,
             num_sgd_iter=10,
         )
-        .callbacks(MyCustomCallbacks)
+        # .callbacks(MyCustomCallbacks)
         .debugging(log_level="INFO")
         .framework(framework="torch")
         .resources(num_gpus=int(os.environ.get("RLLIB_NUM_GPUS", "0")))
@@ -87,4 +94,10 @@ if __name__ == "__main__":
         checkpoint_freq=10,
         local_dir= local_dir,
         config=config.to_dict(),
+        callbacks=[WandbLoggerCallback(
+        project="rllib-MAPPO-simplespread",
+        entity= "biorobotics-marl",
+        api_key="5c8d2be2d372d7685da285d9477c9f2e90577628",
+        log_config=True
+        )]
     )
